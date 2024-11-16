@@ -1,0 +1,254 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9; /* Light purple/gray background */
+  color: #4f4f4f; /* Dark gray text for readability */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* App container */
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #222; /* Deep purple background */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow effect for depth */
+}
+
+
+
+.title {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color change and underline */
+  cursor: pointer; /* Makes the cursor a pointer on hover */
+}
+
+.title:hover {
+  color: #8e44ad; /* Change color to a purple shade when hovered */
+  text-decoration: underline; /* Underline the title on hover */
+} 
+/* Menu Toggle button */
+.menu-toggle {
+  background-color: #340647;  /* Light purple for the normal state */
+  border: none;
+  color: white;
+  font-size: 1.7em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu-toggle:hover {
+  background-color: #8e44ad;  /* Darker purple when hovered */
+  transform: scale(1.1);  /* Slightly scale up the button to emphasize */
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+  font-size: 1.2em; /* Adjust the size of the emoji */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.2); /* Slightly increase the size when hovered */
+}
+
+.dark-mode-toggle:active {
+  transform: scale(1.1); /* Slight decrease when clicked */
+}
+
+/* Optional: Add more styling for the transition or other effects */
+
+
+/* Categories sidebar */
+.categories {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #6e2a8e; /* Lighter purple */
+  color: white;
+  padding: 15px;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.categories.open {
+  transform: translateX(0);
+}
+
+/* Category buttons */
+.category-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+}
+.categories:hover {
+  transform: translateX(0); /* Slide the sidebar in when hovered */
+}
+.category-btn:hover,
+.category-btn.active {
+  background-color: #8e44ad; /* Purple hover effect */
+  color: white;
+}
+
+/* Content area */
+.content {
+  display: flex;
+  margin-left: 250px;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* News Articles Section */
+.news-articles {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* News Cards */
+.news-card {
+  background: linear-gradient(135deg, #370d49, #334464); /* Darker to lighter purple gradient */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px;
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s; /* Add smooth transition for shadow, scaling, and color */
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2); /* Light shadow effect */
+  max-width: 920px; /* Ensure card width is smaller */
+  width: 100%; /* Allow cards to be responsive */
+  cursor: pointer;
+}
+
+.news-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  transform: scale(1.05); /* Slight scaling effect for emphasis */
+  background: linear-gradient(135deg, #4c1a5e, #4c5b7c); /* Slightly lighter purple gradient */
+}
+
+
+.news-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.news-card h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #ddd8ce; /* Dark purple for titles */
+}
+
+.news-card p {
+  font-size: 1em;
+  color: #ddd8ce; /* Lighter gray for text */
+}
+
+/* Article Preview */
+.article-preview {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.article-preview h2 {
+  font-size: 1.5em;
+  color: #7a3d95; /* Deep purple */
+  margin-bottom: 15px;
+}
+
+.article-preview a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #7a3d95;
+  font-weight: 600;
+}
+
+.article-preview a:hover {
+  text-decoration: underline;
+}
+/* Close preview button styling */
+.close-preview-btn {
+  background-color: red; /* Red background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px; /* Optional, for rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Add hover effect for the button */
+.close-preview-btn:hover {
+  background-color: darkred; /* Darker red when hovered */
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #2f2f2f; /* Dark gray */
+  color: #e0e0e0;
+}
+
+.dark-mode .news-card,
+.dark-mode .article-preview {
+  background-color: #424242; /* Darker background for cards and previews */
+  border-color: #333;
+}
+
+.dark-mode .category-btn:hover,
+.dark-mode .category-btn.active {
+  background-color: #8e44ad; /* Lighter purple */
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .categories {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  .news-articles {
+    margin-left: 0;
+  }
+}

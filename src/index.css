@@ -1,0 +1,48 @@
+/* Apply Host Grotesk as the default font for the whole page */
+body {
+  margin: 0;
+  font-family: 'Host Grotesk', sans-serif; /* Default font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply Host Grotesk to the header specifically */
+header {
+  font-family: 'Host Grotesk', sans-serif; /* Ensures the header uses Host Grotesk */
+  font-weight: 600; /* You can adjust the weight as needed */
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: 'Host Grotesk', sans-serif; /* Ensure the menu button uses Host Grotesk */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menu-toggle:hover {
+  background-color: #555; /* Darker color for hover effect */
+}
+
+/* Close preview button styling */
+.close-preview-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Host Grotesk', sans-serif; /* Ensure the close preview button uses Host Grotesk */
+  transition: background-color 0.3s ease;
+}
+
+.close-preview-btn:hover {
+  background-color: darkred;
+}
+/* Apply Poppins for headings, if desired */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to headings */
+  font-weight: 600;
+}
